@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# archdot-install: Runs first-time setup scripts for Arch Linux installation
+#
+# Usage:
+#     archdot-install
+
+if [ -d ~/.archdot ]; then
+    cd ~/.archdot
+    git pull
+else
+    git clone https://github.com/Furglitch/archdot.git ~/.archdot
+    cd ~/.archdot
+fi
+
+read -sp "Enter sudo password: " SUDO_PASS
+echo
+
+ansible-playbook main.yml -e "ansible_become_password=${SUDO_PASS}"

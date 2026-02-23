@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# archdot-update: Updates the system and all dotfiles
+#
+# Usage:
+#     archdot-update

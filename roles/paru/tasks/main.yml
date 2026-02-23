@@ -1,0 +1,13 @@
+---
+- name: Clone paru repository
+  become_user: aur_builder
+  git:
+    repo: 'https://aur.archlinux.org/paru.git'
+    dest: '/tmp/paru'
+    clone: yes
+
+- name: Build and install paru
+  become_user: aur_builder
+  command:
+    cmd: makepkg -si --noconfirm
+    chdir: /tmp/paru

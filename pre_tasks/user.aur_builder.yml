@@ -1,0 +1,15 @@
+---
+- name: Create user 'aur_builder'
+  ansible.builtin.user:
+    name: aur_builder
+    shell: /bin/bash
+    groups: wheel
+    append: yes
+
+- name: Allow 'aur_builder' to use `sudo pacman` without password
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers.d/install-aur_builder
+    line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+    create: yes
+    mode: '0644'
+    validate: 'visudo -cf %s'
