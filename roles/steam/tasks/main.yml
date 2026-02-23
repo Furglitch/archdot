@@ -1,0 +1,10 @@
+---
+- name: steam | ensure steam installed
+  kewlfft.aur.aur:
+    name: steam
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: steam | run steam-rom-manager tasks
+  ansible.builtin.include_tasks: steam-rom-manager.yml

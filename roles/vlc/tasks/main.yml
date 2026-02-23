@@ -1,0 +1,7 @@
+---
+- name: vlc | ensure vlc installed
+  kewlfft.aur.aur:
+    name: vlc
+    state: present
+    use: paru
+  become_user: aur_builder

@@ -1,0 +1,14 @@
+---
+- name: rofi | uninstall wofi
+  kewlfft.aur.aur:
+    name: wofi
+    state: absent
+    use: paru
+  become_user: aur_builder
+
+- name: rofi | ensure rofi installed
+  kewlfft.aur.aur:
+    name: rofi
+    state: present
+    use: paru
+  become_user: aur_builder

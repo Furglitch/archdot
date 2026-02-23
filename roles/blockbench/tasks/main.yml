@@ -1,0 +1,7 @@
+---
+- name: blockbench | ensure blockbench installed
+  kewlfft.aur.aur:
+    name: blockbench
+    state: present
+    use: paru
+  become_user: aur_builder

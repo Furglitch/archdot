@@ -1,0 +1,14 @@
+---
+- name: jdk-temurin | ensure jdk17-temurin installed
+  kewlfft.aur.aur:
+    name: jdk17-temurin
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: jdk-temurin | ensure jdk21-temurin installed
+  kewlfft.aur.aur:
+    name: jdk21-temurin
+    state: present
+    use: paru
+  become_user: aur_builder

@@ -1,0 +1,7 @@
+---
+- name: iwd | ensure iwd installed
+  kewlfft.aur.aur:
+    name: iwd
+    state: present
+    use: paru
+  become_user: aur_builder

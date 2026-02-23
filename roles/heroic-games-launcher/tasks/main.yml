@@ -1,0 +1,7 @@
+---
+- name: heroic-games-launcher | ensure heroic-games-launcher-bin installed
+  kewlfft.aur.aur:
+    name: heroic-games-launcher-bin
+    state: present
+    use: paru
+  become_user: aur_builder

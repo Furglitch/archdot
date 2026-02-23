@@ -1,0 +1,6 @@
+- name: desktop-portal | ensure xdg-desktop-portal-hyprland installed
+  kewlfft.aur.aur:
+    name: xdg-desktop-portal-hyprland
+    state: present
+    use: paru
+  become_user: aur_builder

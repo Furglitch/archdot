@@ -1,0 +1,14 @@
+---
+- name: btop | uninstall htop
+  kewlfft.aur.aur:
+    name: htop
+    state: absent
+    use: paru
+  become_user: aur_builder
+
+- name: btop | ensure btop installed
+  kewlfft.aur.aur:
+    name: btop
+    state: present
+    use: paru
+  become_user: aur_builder

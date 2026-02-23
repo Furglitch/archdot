@@ -1,0 +1,7 @@
+---
+- name: waterfox | ensure waterfox installed
+  kewlfft.aur.aur:
+    name: waterfox-bin
+    state: present
+    use: paru
+  become_user: aur_builder

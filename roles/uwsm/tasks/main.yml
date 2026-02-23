@@ -1,0 +1,7 @@
+---
+- name: uwsm | ensure uwsm installed
+  kewlfft.aur.aur:
+    name: uwsm
+    state: present
+    use: paru
+  become_user: aur_builder

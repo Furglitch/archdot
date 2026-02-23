@@ -1,0 +1,7 @@
+---
+- name: wine | ensure wine installed
+  kewlfft.aur.aur:
+    name: wine
+    state: present
+    use: paru
+  become_user: aur_builder

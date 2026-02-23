@@ -1,0 +1,10 @@
+---
+- name: discord | ensure discord installed
+  kewlfft.aur.aur:
+    name: discord
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: discord | run betterdiscord tasks
+  ansible.builtin.include_tasks: betterdiscord.yml

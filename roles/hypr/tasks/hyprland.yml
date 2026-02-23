@@ -1,0 +1,7 @@
+---
+- name: hyprland | ensure hyprland installed
+  kewlfft.aur.aur:
+    name: hyprland
+    state: present
+    use: paru
+  become_user: aur_builder

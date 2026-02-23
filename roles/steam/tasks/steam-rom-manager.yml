@@ -1,0 +1,6 @@
+- name: steam | ensure steam-rom-manager installed
+  kewlfft.aur.aur:
+    name: steam-rom-manager-bin
+    state: present
+    use: paru
+  become_user: aur_builder

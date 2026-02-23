@@ -1,0 +1,7 @@
+---
+- name: partitionmanager | ensure partitionmanager installed
+  kewlfft.aur.aur:
+    name: partitionmanager
+    state: present
+    use: paru
+  become_user: aur_builder

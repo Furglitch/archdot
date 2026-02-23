@@ -1,0 +1,14 @@
+---
+- name: hyprpolkitagent | uninstall polkit-kde-agent
+  kewlfft.aur.aur:
+    name: polkit-kde-agent
+    state: absent
+    use: paru
+  become_user: aur_builder
+
+- name: hyprpolkitagent | ensure hyprpolkitagent installed
+  kewlfft.aur.aur:
+    name: hyprpolkitagent
+    state: present
+    use: paru
+  become_user: aur_builder

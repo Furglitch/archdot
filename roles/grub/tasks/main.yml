@@ -1,0 +1,14 @@
+---
+- name: grub | ensure grub installed
+  kewlfft.aur.aur:
+    name: grub
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: grub | ensure os-prober installed
+  kewlfft.aur.aur:
+    name: os-prober
+    state: present
+    use: paru
+  become_user: aur_builder

@@ -2,77 +2,51 @@ default_roles:
   # core packages
   - pacman
   - paru
-  # removed packages
-  - dunst
-  - vim
   # install packages
   - 7zip
   - act
-  - ags-hyprpanel-git
   - ark
   - bat
-  - betterdiscordctl
   - blockbench
   - btop
-  - catppuccin-cursors-mocha
   - cliphist
   - discord
   - docker
-  - docker-compose
   - dolphin
   - fastfetch
   - gamemode
-  - ghostty
   - gimp
   - git
-  - github-cli
-  - grim
-  - heroic-games-launcher-bin
-  - htop
-  - hyprcursor
-  - hyprland
-  - hyprpaper
-  - hyprpolkitagent
-  - hyprshot
+  - grub
+  - heroic-games-launcher
+  - hypr
   - iwd
-  - jdk17-temurin
-  - jdk21-temurin
+  - jdk-temurin
   - jekyll
-  - kitty
   - kvantum
   - nano
   - neovim
   - nfs-utils
-  - openssh
-  - os-prober
   - partitionmanager
   - pavucontrol
   - plymouth
-  - polkit-kde-agent
-  - pre-commit
   - prismlauncher
-  - python313
-  - qdirstat-bin
-  - qt5-wayland
-  - qt6-wayland
+  - python
+  - qdirstat
+  - qt-wayland
   - rofi
   - rubygems
-  - slurp
   - smartmontools
-  - sshfs
-  - sshpass
+  - ssh
   - steam
-  - steam-rom-manager-bin
-  - telegram-desktop
-  - uv
+  - telegram
   - uwsm
-  - visual-studio-code-bin
   - vlc
-  - waterfox-bin
+  - vscode
+  - waterfox
   - wget
   - wine
   - wireless_tools
-  - wofi
-  - xdg-desktop-portal-hyprland
   - xdg-utils
   - zsh
+  - ghostty

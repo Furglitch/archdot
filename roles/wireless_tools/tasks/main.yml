@@ -1,0 +1,7 @@
+---
+- name: wireless_tools | ensure wireless_tools installed
+  kewlfft.aur.aur:
+    name: wireless_tools
+    state: present
+    use: paru
+  become_user: aur_builder

@@ -1,0 +1,7 @@
+---
+- name: ark | ensure ark installed
+  kewlfft.aur.aur:
+    name: ark
+    state: present
+    use: paru
+  become_user: aur_builder

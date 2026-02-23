@@ -1,0 +1,7 @@
+---
+- name: zsh | ensure zsh installed
+  kewlfft.aur.aur:
+    name: zsh
+    state: present
+    use: paru
+  become_user: aur_builder

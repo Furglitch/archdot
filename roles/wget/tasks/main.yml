@@ -1,0 +1,7 @@
+---
+- name: wget | ensure wget installed
+  kewlfft.aur.aur:
+    name: wget
+    state: present
+    use: paru
+  become_user: aur_builder

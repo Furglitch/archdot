@@ -1,0 +1,21 @@
+---
+- name: ssh | ensure openssh installed
+  kewlfft.aur.aur:
+    name: openssh
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: ssh | ensure sshpass installed
+  kewlfft.aur.aur:
+    name: sshpass
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: ssh | ensure sshfs installed
+  kewlfft.aur.aur:
+    name: sshfs
+    state: present
+    use: paru
+  become_user: aur_builder

@@ -1,0 +1,7 @@
+---
+- name: fastfetch | ensure fastfetch installed
+  kewlfft.aur.aur:
+    name: fastfetch
+    state: present
+    use: paru
+  become_user: aur_builder

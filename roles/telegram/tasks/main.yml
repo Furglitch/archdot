@@ -1,0 +1,7 @@
+---
+- name: telegram | ensure telegram-desktop installed
+  kewlfft.aur.aur:
+    name: telegram-desktop
+    state: present
+    use: paru
+  become_user: aur_builder

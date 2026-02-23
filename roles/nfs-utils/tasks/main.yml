@@ -1,0 +1,7 @@
+---
+- name: nfs-utils | ensure nfs-utils installed
+  kewlfft.aur.aur:
+    name: nfs-utils
+    state: present
+    use: paru
+  become_user: aur_builder

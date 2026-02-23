@@ -1,0 +1,7 @@
+---
+- name: rubygems | ensure rubygems installed
+  kewlfft.aur.aur:
+    name: rubygems
+    state: present
+    use: paru
+  become_user: aur_builder

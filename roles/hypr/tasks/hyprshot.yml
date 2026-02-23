@@ -1,0 +1,21 @@
+---
+- name: hyprshot | ensure grim installed
+  kewlfft.aur.aur:
+    name: grim
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: hyprshot | ensure slurp installed
+  kewlfft.aur.aur:
+    name: slurp
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: hyprshot | ensure hyprshot installed
+  kewlfft.aur.aur:
+    name: hyprshot
+    state: present
+    use: paru
+  become_user: aur_builder

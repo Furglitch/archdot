@@ -1,0 +1,14 @@
+---
+- name: qt-wayland | ensure qt5-wayland installed
+  kewlfft.aur.aur:
+    name: qt5-wayland
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: qt-wayland | ensure qt6-wayland installed
+  kewlfft.aur.aur:
+    name: qt6-wayland
+    state: present
+    use: paru
+  become_user: aur_builder

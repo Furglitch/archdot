@@ -1,0 +1,7 @@
+---
+- name: jekyll | ensure jekyll installed
+  kewlfft.aur.aur:
+    name: jekyll
+    state: present
+    use: paru
+  become_user: aur_builder

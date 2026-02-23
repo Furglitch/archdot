@@ -1,0 +1,10 @@
+---
+- name: xdg-utils | ensure xdg-utils installed
+  kewlfft.aur.aur:
+    name: xdg-utils
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: xdg-utils | run desktop-portal tasks
+  ansible.builtin.include_tasks: desktop-portal.yml

@@ -1,0 +1,7 @@
+---
+- name: gamemode | ensure gamemode installed
+  kewlfft.aur.aur:
+    name: gamemode
+    state: present
+    use: paru
+  become_user: aur_builder

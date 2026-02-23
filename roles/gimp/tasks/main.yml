@@ -1,0 +1,7 @@
+---
+- name: gimp | ensure gimp installed
+  kewlfft.aur.aur:
+    name: gimp
+    state: present
+    use: paru
+  become_user: aur_builder

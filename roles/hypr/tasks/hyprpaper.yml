@@ -1,0 +1,7 @@
+---
+- name: hyprpaper | ensure hyprpaper installed
+  kewlfft.aur.aur:
+    name: hyprpaper
+    state: present
+    use: paru
+  become_user: aur_builder

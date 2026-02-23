@@ -1,0 +1,14 @@
+---
+- name: neovim | uninstall vim
+  kewlfft.aur.aur:
+    name: vim
+    state: absent
+    use: paru
+  become_user: aur_builder
+
+- name: neovim | ensure neovim installed
+  kewlfft.aur.aur:
+    name: neovim
+    state: present
+    use: paru
+  become_user: aur_builder

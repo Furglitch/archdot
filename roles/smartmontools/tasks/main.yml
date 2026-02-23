@@ -1,0 +1,7 @@
+---
+- name: smartmontools | ensure smartmontools installed
+  kewlfft.aur.aur:
+    name: smartmontools
+    state: present
+    use: paru
+  become_user: aur_builder

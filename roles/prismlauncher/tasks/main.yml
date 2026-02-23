@@ -1,0 +1,7 @@
+---
+- name: prismlauncher | ensure prismlauncher installed
+  kewlfft.aur.aur:
+    name: prismlauncher
+    state: present
+    use: paru
+  become_user: aur_builder

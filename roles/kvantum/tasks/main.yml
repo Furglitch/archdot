@@ -1,0 +1,7 @@
+---
+- name: kvantum | ensure kvantum installed
+  kewlfft.aur.aur:
+    name: kvantum
+    state: present
+    use: paru
+  become_user: aur_builder

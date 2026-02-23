@@ -1,0 +1,7 @@
+---
+- name: nano | ensure nano installed
+  kewlfft.aur.aur:
+    name: nano
+    state: present
+    use: paru
+  become_user: aur_builder

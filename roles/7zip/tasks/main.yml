@@ -1,0 +1,7 @@
+---
+- name: 7zip | ensure 7zip installed
+  kewlfft.aur.aur:
+    name: 7zip
+    state: present
+    use: paru
+  become_user: aur_builder

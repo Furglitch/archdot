@@ -1,0 +1,14 @@
+---
+- name: vscode | ensure vscode installed
+  kewlfft.aur.aur:
+    name: visual-studio-code-bin
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: vscode | ensure pre-commit installed
+  kewlfft.aur.aur:
+    name: pre-commit
+    state: present
+    use: paru
+  become_user: aur_builder

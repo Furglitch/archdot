@@ -1,0 +1,14 @@
+---
+- name: hyprpanel | ensure ags-hyprpanel-git installed
+  kewlfft.aur.aur:
+    name: ags-hyprpanel-git
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: hyprpanel | uninstall dunst # hyprpanel has its own notification daemon
+  kewlfft.aur.aur:
+    name: dunst
+    state: absent
+    use: paru
+  become_user: aur_builder

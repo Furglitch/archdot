@@ -1,0 +1,7 @@
+---
+- name: betterdiscord | ensure betterdiscordctl installed
+  kewlfft.aur.aur:
+    name: betterdiscordctl
+    state: present
+    use: paru
+  become_user: aur_builder

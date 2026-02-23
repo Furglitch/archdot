@@ -1,0 +1,14 @@
+---
+- name: hyprcursor | ensure hyprcursor installed
+  kewlfft.aur.aur:
+    name: hyprcursor
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: hyprcursor | ensure catppuccin-cursors-mocha installed
+  kewlfft.aur.aur:
+    name: catppuccin-cursors-mocha
+    state: present
+    use: paru
+  become_user: aur_builder

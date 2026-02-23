@@ -1,0 +1,7 @@
+---
+- name: dolphin | ensure dolphin installed
+  kewlfft.aur.aur:
+    name: dolphin
+    state: present
+    use: paru
+  become_user: aur_builder

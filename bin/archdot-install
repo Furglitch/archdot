@@ -16,4 +16,5 @@ fi
 read -sp "Enter sudo password: " SUDO_PASS
 echo
 
+ansible-galaxy collection install -r requirements.yml
 ansible-playbook main.yml -e "ansible_become_password=${SUDO_PASS}"

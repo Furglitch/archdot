@@ -1,0 +1,14 @@
+---
+- name: git | ensure git installed
+  kewlfft.aur.aur:
+    name: git
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: git | ensure github-cli installed
+  kewlfft.aur.aur:
+    name: github-cli
+    state: present
+    use: paru
+  become_user: aur_builder

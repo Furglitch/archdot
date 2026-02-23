@@ -1,0 +1,14 @@
+---
+- name: ghostty | ensure ghostty installed
+  kewlfft.aur.aur:
+    name: ghostty
+    state: present
+    use: paru
+  become_user: aur_builder
+
+- name: ghostty | uninstall kitty
+  kewlfft.aur.aur:
+    name: kitty
+    state: absent
+    use: paru
+  become_user: aur_builder
