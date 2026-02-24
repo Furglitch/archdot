@@ -10,15 +10,23 @@ The structure of this repository is based on [TechDufus/dotfiles](https://github
 
 ```
 .
-├── archinstall/            # archinstall scripts
-├── bin/                    # Custom scripts
-├── group_vars/             # Ansible group variables
-├── pre_tasks/              # Ansible pre-tasks
-├── roles/                  # Ansible roles
-├── ansible.cfg             # Ansible configuration file
-├── main.yml                # Main Ansible playbook
-├── README.md               # This file
-├── requirements.yml        # Ansible Galaxy requirements
+├── archinstall/                    # archinstall scripts
+├── bin/                            # Custom scripts
+├── group_vars/all.yml              # Ansible group variables
+├── pre_tasks/                      # Ansible pre-tasks
+├── roles/                          # Ansible roles
+│   └── <role>/
+│       ├── defaults/               # Default variables
+│       ├── files/                  # Configuration files
+|       |   └── <module>/
+│       ├── handlers/               # Ansible handlers
+│       ├── tasks/main.yml          # Main task
+│       ├── tasks/*.yml             # Additional tasks
+│       └── templates/              # Jinja2 templates
+├── ansible.cfg                     # Ansible configuration file
+├── main.yml                        # Main Ansible playbook
+├── README.md                       # This file
+├── requirements.yml                # Ansible Galaxy requirements
 ```
 
 ## Prerequisites
